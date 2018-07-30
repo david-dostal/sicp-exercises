@@ -1,5 +1,5 @@
 #lang sicp
-(#%require "chapter-1.1-code.scm")
+(#%require "book-code.scm")
 
 (define (good-enough-2? guess lastguess x)
   (< (abs (- guess lastguess))

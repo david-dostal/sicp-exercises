@@ -1,7 +1,7 @@
 #lang sicp
 
-; Curious Questions 1.1 - 1.5:
-; ============================
+; Curious Questions:
+; ==================
 
 ; 1)
 ; What does a procedure evaluete to? What is printed as output?

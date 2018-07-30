@@ -1,5 +1,5 @@
 #lang sicp
-(#%require "chapter-1.1-code.scm")
+(#%require "book-code.scm")
 
 ; Exercise 1.7:
 ; =============
