@@ -22,52 +22,48 @@
 ; | (Φ^n)/√5 - (Φ^n)/√5 + Ψ^n/√5 | < 1/2
 ;                       | Ψ^n/√5 | < 1/2
 ;          | ((1 - √5)/2)^n / √5 | < 1/2
- ;            | (1 - √5)^n / 2^n | < √5 / 2
+;             | (1 - √5)^n / 2^n | < √5 / 2
 ;               2 * | (1 - √5)^n | < √5 * 2^n
 ;
-; We can see that 2 < √5 and |(1 - √5)| < 2, thus the left side must be smaller,
-; which was to be proven.
+; We can see that 2 < √5 and |(1 - √5)| < 2, thus the left side must be smaller
+; than the left side, which was to be proven.
 
 
 ; All we need to prove now is the statement from the hint (using induction):
 ; 
 ; Fib(n) = (φ^n - Ψ^n)/√5
 ; 
-; 1)
+; 1) Let's start with the base cases:
 ; Fib(1) = (ϕ - Ψ)/√5
-;
-; 1 = ((1 + √5)/2 - (1 - √5)/2) / √5
-; 1 = (1 + √5 - 1 + √5) / 2√5
-; 1 = 2√5 / 2√5
-; 1 = 1
-; 
-; As we can see, the claim is true for n=1. We can easily prove this for n=2:
+;      1 = ((1 + √5)/2 - (1 - √5)/2) / √5
+;      1 = (1 + √5 - 1 + √5) / 2√5
+;      1 = 2√5 / 2√5
+;      1 = 1
 ; 
 ; Fib(2) = (φ^2 - Ψ^2)/√5
-; Fib(2) = ((1 + √5)^2 - (1 - √5)^2) / 4√5
-; Fib(2) = (1 + 2√5 + 5 - 1 + 2√5 - 5) / 4√5
-; Fib(2) = 4√5 / 4√5 = 1
+;      1 = ((1 + √5)^2 - (1 - √5)^2) / 4√5
+;      1 = (1 + 2√5 + 5 - 1 + 2√5 - 5) / 4√5
+;      1 = 4√5 / 4√5
+;      1 = 1
 ; 
-; 2)
-; Now, assuming
+; 2) Now, assuming:
 ; Fib(n) = (φ^n - Ψ^n)/√5 and
 ; Fib(n+1) = (φ^(n+1) - Ψ^(n+1))/√5
 ; 
-; 3)
-; We want to prove that
+; 3) We want to prove that:
 ; Fib(n+2) = (φ^(n+2) - Ψ^(n+2))/√5.
 ;
-; Fib(n+1) + Fib(n) = (φ^(n+2) - Ψ^(n+2))/√5
+;                       Fib(n+1) + Fib(n) = (φ^(n+2) - Ψ^(n+2))/√5
 ; (φ^(n+1) - Ψ^(n+1))/√5 + (φ^n - Ψ^n)/√5 = (φ^(n+2) - Ψ^(n+2))/√5
-; φ^(n+1) - Ψ^(n+1) + φ^n - Ψ^n = φ^(n+2) - Ψ^(n+2)
-; φ*φ^n - Ψ*Ψ^n + φ^n - Ψ^n = φ*φ*φ^n - Ψ*Ψ*Ψ^n
-; φ^n*(φ-1) - Ψ^n*(Ψ-1) = φ^n*(φ^2) - Ψ^n*(Ψ^2)
+;           φ^(n+1) - Ψ^(n+1) + φ^n - Ψ^n = φ^(n+2) - Ψ^(n+2)
+;               φ*φ^n - Ψ*Ψ^n + φ^n - Ψ^n = φ*φ*φ^n - Ψ*Ψ*Ψ^n
+;                   φ^n*(φ-1) - Ψ^n*(Ψ-1) = φ^n*(φ^2) - Ψ^n*(Ψ^2)
 ;
 ; Previously in the book it was mentioned, that φ is the golden ratio, which
 ; satisfies the equation φ^2 = φ + 1. It is also true, that Ψ^2 = Ψ + 1 (we
 ; won't prove it here).
 ; Knowing that, we can substitute φ^2 for φ + 1 and Ψ^2 for Ψ + 1:
 ; 
-; φ^n*(φ-1) - Ψ^n*(Ψ-1) = φ^n*(φ-1) - Ψ^n*(Ψ-1)
+;                   φ^n*(φ-1) - Ψ^n*(Ψ-1) = φ^n*(φ-1) - Ψ^n*(Ψ-1)
 ;
-; Thus the proof is finished. Q. E. D.
+; Both sides of the equation are equal, which was to be shown.
