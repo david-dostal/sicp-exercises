@@ -1,5 +1,5 @@
 #lang sicp
-(#%require "book-code.scm")
+(#%require "square-roots.scm")
 
 (define (good-enough-2? guess lastguess x)
   (< (abs (- guess lastguess))

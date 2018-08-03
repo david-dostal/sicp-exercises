@@ -1,12 +1,11 @@
 #lang sicp
 (#%provide (all-defined))
 
-; Code for chapter 1.1 - The Elements of Programming
-; ==================================================
+; Square Roots - Newtons method:
+; ==============================
 
-; # Square Roots - Newtons method
-
-(define (sqrt x) (sqrt-iter 1 x))
+(define (sqrt x)
+  (sqrt-iter 1 x))
 
 (define (sqrt-iter guess x)
   (if (good-enough? guess x)

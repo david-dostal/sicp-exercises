@@ -1,5 +1,5 @@
 #lang sicp
-(#%require "book-code.scm")
+(#%require "square-roots.scm")
 
 ; Exercise 1.7:
 ; =============
