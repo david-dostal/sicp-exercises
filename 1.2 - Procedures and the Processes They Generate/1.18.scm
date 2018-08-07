@@ -1,5 +1,5 @@
-#lang scheme
-(require "1.17.scm")
+#lang sicp
+(#%require "1.17.scm")
 
 ; Exercise 1.18:
 ; ==============

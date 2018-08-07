@@ -1,4 +1,4 @@
-#lang scheme
+#lang sicp
 (#%provide (all-defined))
 
 ; Exercise 1.17:
