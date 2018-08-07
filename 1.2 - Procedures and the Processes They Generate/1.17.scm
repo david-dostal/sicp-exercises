@@ -1,4 +1,5 @@
 #lang scheme
+(#%provide (all-defined))
 
 ; Exercise 1.17:
 ; ==============
@@ -26,10 +27,3 @@
   (cond ((= b 0) 0)
         ((even? b) (fast*-rec (double a) (halve b)))
         (else (+ a (fast*-rec a (- b 1))))))
-
-(define (fast*-iter a b)
-  (define (iter a b product)
-    (cond ((= b 0) product)
-          ((even? b) (iter (double a) (halve b) product))
-          (else (iter a (- b 1) (+ product a)))))
-  (iter a b 0))
