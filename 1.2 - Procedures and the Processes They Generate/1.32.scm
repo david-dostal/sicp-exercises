@@ -1,4 +1,5 @@
 #lang sicp
+(#%provide accumulate-iter)
 
 ; Exercise 1.32:
 ; ==============
