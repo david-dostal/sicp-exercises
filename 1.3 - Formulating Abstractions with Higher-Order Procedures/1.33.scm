@@ -1,8 +1,8 @@
 #lang sicp
+(#%require (file "../1.2 - Procedures and the Processes They Generate/prime.scm"))
+(#%require (file "../1.2 - Procedures and the Processes They Generate/gcd.scm"))
+(#%require (file "../1.2 - Procedures and the Processes They Generate/square.scm"))
 (#%require "1.32.scm")
-(#%require "prime.scm")
-(#%require "square.scm")
-(#%require "gcd.scm")
 
 ; Exercise 1.33:
 ; ==============
@@ -50,7 +50,7 @@
 ; a.
 (define (sum-prime-squares a b)
   (define (filter a) (prime? a))
-  (filtered-accumulate-iter filter + 0 identity a add1 b))
+  (filtered-accumulate-iter filter + 0 square a add1 b))
 
 (define (add1 x) (+ 1 x))
 

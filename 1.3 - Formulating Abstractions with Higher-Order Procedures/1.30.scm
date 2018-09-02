@@ -1,4 +1,5 @@
 #lang sicp
+(#%provide sum)
 
 ; Exercise 1.30:
 ; ==============
