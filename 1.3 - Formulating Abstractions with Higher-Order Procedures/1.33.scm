@@ -1,7 +1,7 @@
 #lang sicp
 (#%require (file "../1.2 - Procedures and the Processes They Generate/prime.scm"))
 (#%require (file "../1.2 - Procedures and the Processes They Generate/gcd.scm"))
-(#%require (file "../1.2 - Procedures and the Processes They Generate/square.scm"))
+(#%require "square.scm")
 (#%require "1.32.scm")
 
 ; Exercise 1.33:
