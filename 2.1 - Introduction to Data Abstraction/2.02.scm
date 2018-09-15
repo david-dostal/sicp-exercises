@@ -1,5 +1,6 @@
 #lang sicp
 (#%require "average.scm")
+(#%provide (all-defined))
 
 ; Exercise 2.02:
 ; ==============
@@ -44,8 +45,8 @@
                 (average (y-point start) (y-point end)))))
 
 
-(print-point
- (midpoint-segment
-  (make-segment (make-point 1.0 -2.0)
-                (make-point 3.0 2.0))))
-;(2.0,0.0)
+; (print-point
+;  (midpoint-segment
+;   (make-segment (make-point 1.0 -2.0)
+;                 (make-point 3.0 2.0))))
+; ;(2.0,0.0)
