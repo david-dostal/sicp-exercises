@@ -1,4 +1,5 @@
 #lang sicp
+(#%provide (all-defined))
 
 ; Exercise 2.07:
 ; ==============
