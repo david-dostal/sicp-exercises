@@ -22,8 +22,6 @@
 (define (spans-zero? interval)
   (and (<= (lower-bound interval) 0)
        (>= (upper-bound interval) 0)))
-  ; check for different signs
-  ;(<= (* (upper-bound interval) (lower-bound interval)) 0))
 
 
 (div-interval (make-interval 2 4) (make-interval -3 3))
