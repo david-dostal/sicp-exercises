@@ -1,6 +1,7 @@
 #lang sicp
 (#%require "2.07.scm")
 (#%require "2.08.scm")
+(#%provide (all-defined))
 
 ; Exercise 2.12:
 ; ==============
