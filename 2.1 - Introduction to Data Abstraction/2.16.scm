@@ -41,5 +41,9 @@
 ; measurements and then write their expression using variables for these
 ; intervals. The program then would check the result for all different
 ; combinations of bounds and pick the lowest and highest result as the new
-; bounds. This would of course become very computationally expensive with more
-; than a few variables.
+; bounds.
+;
+; This would of course become very computationally expensive with more
+; than a few variables. (We would need to perform 2^n checks, where n is the
+; number of different variables.) I will leave the implementation of this
+; problem for another time.
