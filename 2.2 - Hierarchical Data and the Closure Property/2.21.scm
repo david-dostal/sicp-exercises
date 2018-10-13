@@ -1,4 +1,5 @@
 #lang sicp
+(#%require "square.scm")
 
 ; Exercise 2.21:
 ; ==============
@@ -20,7 +21,6 @@
 ;   (map <??> <??>))
 
 
-(define (square x) (* x x))
 
 
 (define (square-list items)
