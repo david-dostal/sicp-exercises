@@ -56,6 +56,7 @@
 (define (branch-structure branch) (cadr branch))
 
 
+
 ; b.
 
 ; a few useful helper procedures
@@ -75,6 +76,15 @@
                                    (make-branch 1 1)))))
    (make-branch 2 2)))
 
+(define test-mobile-2
+  (make-mobile
+   (make-branch 1 (make-mobile
+                   (make-branch 1 2)
+                   (make-branch 1 (make-mobile
+                                   (make-branch 1 2)
+                                   (make-branch 1 1)))))
+   (make-branch 2 2)))
+
 ; and finally our total-weight procedure
 (define (total-weight mobile)
   (if (leaf? mobile)
@@ -82,11 +92,49 @@
       (+ (total-weight (left-structure mobile))
          (total-weight (right-structure mobile)))))
 
-; (total-weight test-mobile)
-; 6
+(total-weight test-mobile)
+;6
+(total-weight test-mobile-2)
+;7
+
 
 
 ; c.
+(define (branch-torque branch)
+  (* (branch-length branch)
+     (total-weight (branch-structure branch))))
+
+(define (balanced? mobile)
+  (if (leaf? mobile)
+      true
+      (and (= (branch-torque (left-branch mobile))
+              (branch-torque (right-branch mobile)))
+           (balanced? (left-structure mobile))
+           (balanced? (right-structure mobile)))))
+
+(balanced? test-mobile)
+;#t
+(balanced? test-mobile-2)
+;#f
+
 
 
 ; d.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
