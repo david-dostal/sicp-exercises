@@ -121,20 +121,14 @@
 
 ; d.
 
+; We would only have to redefine the left-branch, right-branch, branch-length
+; and branch-structure procedures, because they hide the particular
+; implementation of the data structures from other procedures using them.
+; The changed procedures would look like this (left-branch and branch-length are
+; in fact the same as before):
 
+; (define (left-branch mobile) (car mobile))
+; (define (right-branch mobile) (cdr mobile))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+; (define (branch-length branch) (car branch))
+; (define (branch-structure branch) (cdr branch))
