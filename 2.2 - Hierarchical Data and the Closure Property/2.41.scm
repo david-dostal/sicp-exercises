@@ -3,6 +3,7 @@
 (#%require "flatmap.scm")
 (#%require "filter.scm")
 (#%require "accumulate.scm")
+(#%require "unique-pairs.scm")
 
 ; Exercise 2.41:
 ; ==============
@@ -34,6 +35,7 @@
 ;((1 2 5) (1 3 4) (1 4 3) (1 5 2) (2 1 5) (2 5 1) (3 1 4) (3 4 1) (4 1 3)
 ;(4 3 1) (5 1 2) (5 2 1))
 (newline)
+(newline)
 
 
 ; I am not sure, if the authors of the book meant to find all different ordered
@@ -41,3 +43,22 @@
 ; ordered triples, or just all triples of integers with a given sum in general
 ; (since that would make use of the previous exercise). The solution above
 ; considers all 3-element permutations of distinct integers.
+
+; Below is a solution based on the previous exercise.
+
+(define (unique-triples i)
+  (flatmap (lambda (i)
+             (flatmap (lambda (j)
+                        (map (lambda (k) (list k j i))
+                             (enumerate-interval 1 (- j 1))))
+                      (enumerate-interval 1 (- i 1))))
+           (enumerate-interval 1 i)))
+
+
+(define (triples-with-sum-2 sum max)
+  (define (correct-sum? triple) (= sum (accumulate + 0 triple)))
+  (filter correct-sum? (unique-triples max)))
+
+(display (triples-with-sum-2 8 5))
+;((1 3 4) (1 2 5))
+(newline)
