@@ -3,7 +3,6 @@
 (#%require "flatmap.scm")
 (#%require "filter.scm")
 (#%require "accumulate.scm")
-(#%require "unique-pairs.scm")
 
 ; Exercise 2.41:
 ; ==============
