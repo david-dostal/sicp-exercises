@@ -2,7 +2,6 @@
 (#%require "filter.scm")
 (#%require "flatmap.scm")
 (#%require "enumerate-interval.scm")
-(#%require racket/trace)
 
 ; Exercise 2.42:
 ; ==============
