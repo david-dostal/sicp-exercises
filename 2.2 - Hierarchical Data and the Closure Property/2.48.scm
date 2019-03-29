@@ -12,6 +12,7 @@
 ; end-segment.
 
 
+
 (define (make-segment start end)
   (list start end))
 
@@ -21,6 +22,16 @@
 (define (end-segment segment)
   (cadr segment))
 
+
+; Alternative solution:
+;
+; (define make-segment list)
+; (define start-segment car)
+; (define end-segment cadr)
+
+
+; Usage:
+
 (define segment (make-segment (make-vect 2 3) (make-vect 4 5)))
 (display segment) ; ((2 3) (4 5))
 (newline)
@@ -28,3 +39,4 @@
 (newline)
 (display (end-segment segment)) ; (4 5)
 (newline)
+
